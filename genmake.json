@@ -1,0 +1,30 @@
+{
+	"entries":
+	{
+		"type": "static",
+
+		"name": "xgk-api",
+
+		"include_directories": "$(SRC)",
+
+		"flags_additional": "$(STD_20) $(NO_LINK) $(VERBOSE) $(OPT_FASTX) $(SSE) -fPIC",
+
+		"watch_files":
+		[
+			{
+				"file": "$(SRC)/uniform/uniform.cpp",
+				"watch_files": "$(SRC)/uniform/uniform.h"
+			},
+
+			{
+				"file": "$(SRC)/uniform-block/uniform-block.cpp",
+
+				"watch_files":
+				[
+					"$(SRC)/uniform-block/uniform-block.h",
+					"$(SRC)/uniform/uniform.h"
+				]
+			}
+		]
+	}
+}
