@@ -15,6 +15,7 @@ namespace XGK
 		{
 			binding = options.binding;
 			name = options.name;
+			// dedicated = options.dedicated;
 
 			UniformBlock::instances.push_back(this);
 		}
@@ -23,6 +24,16 @@ namespace XGK
 		{
 			binding = options.binding;
 			name = options.name;
+			// dedicated = options.dedicated;
+
+			UniformBlock::instances.push_back(this);
+		}
+
+		UniformBlock::UniformBlock (const UniformBlockOptions* options)
+		{
+			binding = options->binding;
+			name = options->name;
+			// dedicated = options->dedicated;
 
 			UniformBlock::instances.push_back(this);
 		}
@@ -57,6 +68,7 @@ namespace XGK
 			size_t binding = offsetof(UniformBlock, binding);
 			size_t name = offsetof(UniformBlock, name);
 			size_t uniforms = offsetof(UniformBlock, uniforms);
+			size_t dedicated = offsetof(UniformBlock, dedicated);
 		};
 
 		UniformBlockOffsets uniform_block_offsets;

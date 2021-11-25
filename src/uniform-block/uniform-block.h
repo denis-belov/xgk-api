@@ -20,6 +20,8 @@ namespace XGK
 			size_t binding {};
 
 			std::string name {};
+
+			// size_t dedicated {};
 		};
 
 
@@ -45,6 +47,8 @@ namespace XGK
 			std::string name {};
 
 			std::vector<XGK::API::Uniform*> uniforms {};
+
+			// size_t dedicated {};
 
 
 
