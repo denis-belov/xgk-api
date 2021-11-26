@@ -19,6 +19,8 @@ namespace XGK
 			std::string name {};
 
 			size_t block_index {};
+
+			size_t size {};
 		};
 	}
 }

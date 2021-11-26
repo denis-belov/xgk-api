@@ -30,6 +30,7 @@ namespace XGK
 		{
 			static std::vector<UniformBlock*> instances;
 
+			// TODO: destroy all dedicated uniforms
 			static void destroy (void);
 
 
