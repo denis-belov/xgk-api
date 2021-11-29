@@ -18,6 +18,7 @@ namespace XGK
 		UniformBlock::UniformBlock (const UniformBlockOptions& options)
 		{
 			binding = options.binding;
+			type = options.type;
 			name = options.name;
 
 			UniformBlock::instances.push_back(this);
@@ -26,6 +27,7 @@ namespace XGK
 		UniformBlock::UniformBlock (const UniformBlockOptions&& options)
 		{
 			binding = options.binding;
+			type = options.type;
 			name = options.name;
 
 			UniformBlock::instances.push_back(this);
@@ -34,6 +36,7 @@ namespace XGK
 		UniformBlock::UniformBlock (const UniformBlockOptions* options)
 		{
 			binding = options->binding;
+			type = options->type;
 			name = options->name;
 
 			UniformBlock::instances.push_back(this);
@@ -67,6 +70,7 @@ namespace XGK
 		struct UniformBlockOffsets
 		{
 			size_t binding = offsetof(UniformBlock, binding);
+			size_t type = offsetof(UniformBlock, type);
 			size_t name = offsetof(UniformBlock, name);
 			size_t uniforms = offsetof(UniformBlock, uniforms);
 		};

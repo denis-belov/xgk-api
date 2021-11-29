@@ -15,9 +15,18 @@ namespace XGK
 {
 	namespace API
 	{
+		enum class DescriptorBindingType : size_t
+		{
+			UNIFORM_BUFFER,
+		};
+
+
+
 		struct UniformBlockOptions
 		{
 			size_t binding {};
+
+			DescriptorBindingType type {};
 
 			std::string name {};
 		};
@@ -42,6 +51,8 @@ namespace XGK
 
 
 			size_t binding {};
+
+			DescriptorBindingType type {};
 
 			std::string name {};
 
