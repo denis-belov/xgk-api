@@ -34,8 +34,45 @@
 
 				"watch_files":
 				[
+					"$(SRC)/uniform/uniform.h",
+					"$(SRC)/uniform-block/uniform-block.h"
+				]
+			},
+
+			{
+				"file": "$(SRC)/descriptor-set/descriptor-set.cpp",
+
+				"watch_files":
+				[
 					"$(SRC)/uniform-block/uniform-block.h",
-					"$(SRC)/uniform/uniform.h"
+					"$(SRC)/descriptor-set/descriptor-set.h"
+				]
+			},
+
+			{
+				"file": "$(SRC)/material/material.cpp",
+
+				"watch_files":
+				[
+					"$(SRC)/uniform/uniform.h",
+					"$(SRC)/uniform-block/uniform-block.h",
+					"$(SRC)/descriptor-set/descriptor-set.h",
+					"$(SRC)/material/material.h"
+				]
+			},
+
+			{
+				"file": "$(SRC)/object/object.cpp",
+				"watch_files": "$(SRC)/object/object.h"
+			},
+
+			{
+				"file": "$(SRC)/scene/scene.cpp",
+
+				"watch_files":
+				[
+					"$(SRC)/object/object.h",
+					"$(SRC)/scene/scene.h"
 				]
 			}
 		]
