@@ -13,10 +13,10 @@ namespace XGK
 			std::size_t glsl100es_code_fragment = offsetof(Material, glsl100es_code_fragment);
 			std::size_t glsl300es_code_vertex = offsetof(Material, glsl300es_code_vertex);
 			std::size_t glsl300es_code_fragment = offsetof(Material, glsl300es_code_fragment);
-			std::size_t spirv_code_vertex = offsetof(Material, spirv_code_vertex);
-			std::size_t spirv_code_fragment = offsetof(Material, spirv_code_fragment);
 			std::size_t glsl4_code_vertex = offsetof(Material, glsl4_code_vertex);
 			std::size_t glsl4_code_fragment = offsetof(Material, glsl4_code_fragment);
+			std::size_t spirv_code_vertex = offsetof(Material, spirv_code_vertex);
+			std::size_t spirv_code_fragment = offsetof(Material, spirv_code_fragment);
 			std::size_t wgsl_code_vertex = offsetof(Material, wgsl_code_vertex);
 			std::size_t wgsl_code_fragment = offsetof(Material, wgsl_code_fragment);
 			std::size_t uniforms = offsetof(Material, uniforms);
@@ -61,6 +61,8 @@ namespace XGK
 			glsl300es_code_fragment = options.glsl300es_code_fragment;
 			glsl4_code_vertex = options.glsl4_code_vertex;
 			glsl4_code_fragment = options.glsl4_code_fragment;
+			spirv_code_vertex = options.spirv_code_vertex;
+			spirv_code_fragment = options.spirv_code_fragment;
 			wgsl_code_vertex = options.wgsl_code_vertex;
 			wgsl_code_fragment = options.wgsl_code_fragment;
 
@@ -77,6 +79,8 @@ namespace XGK
 			glsl300es_code_fragment = options.glsl300es_code_fragment;
 			glsl4_code_vertex = options.glsl4_code_vertex;
 			glsl4_code_fragment = options.glsl4_code_fragment;
+			spirv_code_vertex = options.spirv_code_vertex;
+			spirv_code_fragment = options.spirv_code_fragment;
 			wgsl_code_vertex = options.wgsl_code_vertex;
 			wgsl_code_fragment = options.wgsl_code_fragment;
 
