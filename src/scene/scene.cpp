@@ -10,8 +10,8 @@ namespace XGK
 	{
 		void Scene::addObject (Object& object)
 		{
-			object.scene_vertex_data_offset = vertex_data.size();
-			object.scene_vertex_data_length = object.vertex_data.size();
+			object.scene_vertex_data_offset = vertex_data.size() / 3;
+			object.scene_vertex_data_length = object.vertex_data.size() / 3;
 
 			std::size_t asd = vertex_data.size();
 
@@ -22,8 +22,8 @@ namespace XGK
 
 		void Scene::addObject (Object* object)
 		{
-			object->scene_vertex_data_offset = vertex_data.size();
-			object->scene_vertex_data_length = object->vertex_data.size();
+			object->scene_vertex_data_offset = vertex_data.size() / 3;
+			object->scene_vertex_data_length = object->vertex_data.size() / 3;
 
 			std::size_t asd = vertex_data.size();
 
