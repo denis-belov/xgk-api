@@ -90,9 +90,14 @@ namespace XGK
 		// TODO: destroy all dedicated uniforms
 		void Material::destroy (void)
 		{
-			for (std::size_t i {}; i < Material::instances.size(); ++i)
+			// for (std::size_t i {}; i < Material::instances.size(); ++i)
+			// {
+			// 	delete Material::instances[i];
+			// }
+
+			for (Material* material : Material::instances)
 			{
-				delete Material::instances[i];
+				delete material;
 			}
 		}
 

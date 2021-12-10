@@ -110,7 +110,8 @@ namespace XGK
 					vec4 gl_Position;
 				};
 
-				layout (set = 0, binding = 0) uniform Camera
+				// layout (set = 0, binding = 0) uniform Camera
+				layout (binding = 0) uniform Camera
 				{
 					mat4 projection_matrix;
 					mat4 view_matrix;
@@ -118,7 +119,23 @@ namespace XGK
 
 				void main (void)
 				{
+					// gl_PointSize = 10.0f;
 					gl_Position = camera.projection_matrix * camera.view_matrix * vec4(in_position, 1.0f);
+					// gl_Position = vec4(in_position, 1.0f);
+					// if (gl_VertexID == 0)
+					// {
+					// 	gl_Position = vec4(-1.0f, -1.0f, 0.0f, 1.0f);
+					// }
+					// else if (gl_VertexID == 1)
+					// {
+					// 	gl_Position = vec4(-1.0f, 1.0f, 0.0f, 1.0f);
+					// }
+					// else
+					// {
+					// 	gl_Position = vec4(1.0f, 1.0f, 0.0f, 1.0f);
+					// }
+
+					// gl_Position = vec4(0.0f, 0.0f, 0.0f, 1.0f);
 				}
 			)"};
 
