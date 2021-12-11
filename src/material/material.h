@@ -7,9 +7,9 @@
 #include <string>
 #include <vector>
 
-#include "uniform/uniform.h"
-#include "uniform-block/uniform-block.h"
-#include "descriptor-set/descriptor-set.h"
+#include "xgk-api/src/uniform/uniform.h"
+#include "xgk-api/src/uniform-block/uniform-block.h"
+#include "xgk-api/src/descriptor-set/descriptor-set.h"
 
 
 
@@ -29,9 +29,19 @@ namespace XGK
 
 
 
-		struct MaterialOptions
+		struct Material
 		{
-			MATERIAL::Topology topology { MATERIAL::Topology::TRIANGLES };
+			static std::vector<Material*> instances;
+
+			static void destroy (void);
+
+
+
+			// No constructors for aggregate type
+
+
+
+			MATERIAL::Topology topology {};
 
 			std::string glsl100es_code_vertex
 			{R"(
@@ -202,38 +212,6 @@ namespace XGK
 					return vec4<f32>(1.0, 1.0, 0.0, 1.0);
 				}
 			)"};
-		};
-
-
-
-		struct Material
-		{
-			static std::vector<Material*> instances;
-
-			static void destroy (void);
-
-
-
-			// Material () = default;
-			Material (void);
-			Material (const MaterialOptions&);
-			Material (const MaterialOptions&&);
-			Material (const MaterialOptions*);
-
-
-
-			MATERIAL::Topology topology {};
-
-			std::string glsl100es_code_vertex {};
-			std::string glsl100es_code_fragment {};
-			std::string glsl300es_code_vertex {};
-			std::string glsl300es_code_fragment {};
-			std::string glsl4_code_vertex {};
-			std::string glsl4_code_fragment {};
-			std::vector<uint32_t> spirv_code_vertex {};
-			std::vector<uint32_t> spirv_code_fragment {};
-			std::string wgsl_code_vertex {};
-			std::string wgsl_code_fragment {};
 
 			std::vector<XGK::API::Uniform*> uniforms {};
 			std::vector<XGK::API::UniformBlock*> uniform_blocks {};

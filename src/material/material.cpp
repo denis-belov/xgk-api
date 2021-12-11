@@ -1,4 +1,4 @@
-#include "material.h"
+#include "xgk-api/src/material/material.h"
 
 
 
@@ -31,61 +31,7 @@ namespace XGK
 
 		std::vector<Material*> Material::instances {};
 
-		Material::Material (void)
-		{
-			const MaterialOptions options {};
 
-			topology = options.topology;
-
-			glsl100es_code_vertex = options.glsl100es_code_vertex;
-			glsl100es_code_fragment = options.glsl100es_code_fragment;
-			glsl300es_code_vertex = options.glsl300es_code_vertex;
-			glsl300es_code_fragment = options.glsl300es_code_fragment;
-			glsl4_code_vertex = options.glsl4_code_vertex;
-			glsl4_code_fragment = options.glsl4_code_fragment;
-			spirv_code_vertex = options.spirv_code_vertex;
-			spirv_code_fragment = options.spirv_code_fragment;
-			wgsl_code_vertex = options.wgsl_code_vertex;
-			wgsl_code_fragment = options.wgsl_code_fragment;
-
-			Material::instances.push_back(this);
-		}
-
-		Material::Material (const MaterialOptions& options)
-		{
-			topology = options.topology;
-
-			glsl100es_code_vertex = options.glsl100es_code_vertex;
-			glsl100es_code_fragment = options.glsl100es_code_fragment;
-			glsl300es_code_vertex = options.glsl300es_code_vertex;
-			glsl300es_code_fragment = options.glsl300es_code_fragment;
-			glsl4_code_vertex = options.glsl4_code_vertex;
-			glsl4_code_fragment = options.glsl4_code_fragment;
-			spirv_code_vertex = options.spirv_code_vertex;
-			spirv_code_fragment = options.spirv_code_fragment;
-			wgsl_code_vertex = options.wgsl_code_vertex;
-			wgsl_code_fragment = options.wgsl_code_fragment;
-
-			Material::instances.push_back(this);
-		}
-
-		Material::Material (const MaterialOptions&& options)
-		{
-			topology = options.topology;
-
-			glsl100es_code_vertex = options.glsl100es_code_vertex;
-			glsl100es_code_fragment = options.glsl100es_code_fragment;
-			glsl300es_code_vertex = options.glsl300es_code_vertex;
-			glsl300es_code_fragment = options.glsl300es_code_fragment;
-			glsl4_code_vertex = options.glsl4_code_vertex;
-			glsl4_code_fragment = options.glsl4_code_fragment;
-			spirv_code_vertex = options.spirv_code_vertex;
-			spirv_code_fragment = options.spirv_code_fragment;
-			wgsl_code_vertex = options.wgsl_code_vertex;
-			wgsl_code_fragment = options.wgsl_code_fragment;
-
-			Material::instances.push_back(this);
-		}
 
 		// TODO: destroy all dedicated uniforms
 		void Material::destroy (void)

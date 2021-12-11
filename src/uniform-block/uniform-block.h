@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 
-#include "uniform/uniform.h"
+#include "xgk-api/src/uniform/uniform.h"
 
 
 
@@ -22,17 +22,6 @@ namespace XGK
 
 
 
-		struct UniformBlockOptions
-		{
-			std::size_t binding {};
-
-			DescriptorBindingType type {};
-
-			std::string name {};
-		};
-
-
-
 		// struct DescriptorBinding
 		struct UniformBlock
 		{
@@ -43,11 +32,7 @@ namespace XGK
 
 
 
-			// UniformBlock () = default;
-			UniformBlock (void);
-			UniformBlock (const UniformBlockOptions&);
-			UniformBlock (const UniformBlockOptions&&);
-			UniformBlock (const UniformBlockOptions*);
+			// No constructors for aggregate type
 
 
 

@@ -9,7 +9,7 @@
 
 #include <vector>
 
-#include "uniform-block/uniform-block.h"
+#include "xgk-api/src/uniform-block/uniform-block.h"
 
 
 

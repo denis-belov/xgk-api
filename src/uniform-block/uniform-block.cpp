@@ -1,4 +1,4 @@
-#include "uniform-block.h"
+#include "xgk-api/src/uniform-block/uniform-block.h"
 
 
 
@@ -9,38 +9,6 @@ namespace XGK
 		std::vector<UniformBlock*> UniformBlock::instances;
 
 
-
-		UniformBlock::UniformBlock (void)
-		{
-			UniformBlock::instances.push_back(this);
-		}
-
-		UniformBlock::UniformBlock (const UniformBlockOptions& options)
-		{
-			binding = options.binding;
-			type = options.type;
-			name = options.name;
-
-			UniformBlock::instances.push_back(this);
-		}
-
-		UniformBlock::UniformBlock (const UniformBlockOptions&& options)
-		{
-			binding = options.binding;
-			type = options.type;
-			name = options.name;
-
-			UniformBlock::instances.push_back(this);
-		}
-
-		UniformBlock::UniformBlock (const UniformBlockOptions* options)
-		{
-			binding = options->binding;
-			type = options->type;
-			name = options->name;
-
-			UniformBlock::instances.push_back(this);
-		}
 
 		void UniformBlock::destroy (void)
 		{

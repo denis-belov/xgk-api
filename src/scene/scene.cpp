@@ -1,6 +1,6 @@
 #include <cstring>
 
-#include "scene.h"
+#include "xgk-api/src/scene/scene.h"
 
 
 

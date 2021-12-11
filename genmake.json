@@ -1,13 +1,20 @@
 {
 	"variables":
 	{
+		"gcc-x64":
+		{
+			"REPS": "/home/denis/reps"
+		},
+
 		"clang-wasm32":
 		{
+			"REPS": "/home/denis/reps",
 			"FLAGS_ADD": "-matomics -mbulk-memory"
 		},
 
 		"clang-wasm64":
 		{
+			"REPS": "/home/denis/reps",
 			"FLAGS_ADD": "-matomics -mbulk-memory"
 		}
 	},
@@ -18,12 +25,17 @@
 
 		"name": "xgk-api",
 
-		"include_directories": "$(SRC)",
+		"include_directories": "$(REPS)/denis-belov",
 
 		"flags_additional": "$(STD_20) $(NO_LINK) $(VERBOSE) $(OPT_FASTX) $(SSE) $(FLAGS_ADD) -fPIC",
 
 		"watch_files":
 		[
+			{
+				"file": "$(SRC)/renderer/renderer.cpp",
+				"watch_files": "$(SRC)/renderer/renderer.h"
+			},
+
 			{
 				"file": "$(SRC)/uniform/uniform.cpp",
 				"watch_files": "$(SRC)/uniform/uniform.h"
