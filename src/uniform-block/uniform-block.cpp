@@ -43,6 +43,6 @@ namespace XGK
 			std::size_t uniforms = offsetof(UniformBlock, uniforms);
 		};
 
-		UniformBlockOffsets uniform_block_offsets;
+		UniformBlockOffsets uniform_block_offsets {};
 	}
 }

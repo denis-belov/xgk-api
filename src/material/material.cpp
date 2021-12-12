@@ -25,7 +25,7 @@ namespace XGK
 			// std::size_t dedicated_uniform_block = offsetof(Material, dedicated_uniform_block);
 		};
 
-		MaterialOffsets material_offsets;
+		MaterialOffsets material_offsets {};
 
 
 

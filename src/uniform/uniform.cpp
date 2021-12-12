@@ -14,6 +14,6 @@ namespace XGK
 			std::size_t size = offsetof(Uniform, size);
 		};
 
-		UniformOffsets uniform_offsets;
+		UniformOffsets uniform_offsets {};
 	}
 }

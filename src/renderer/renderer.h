@@ -13,8 +13,8 @@ namespace XGK
 	{
 		struct Renderer
 		{
-			std::size_t width {};
-			std::size_t height {};
+			size_t width {};
+			size_t height {};
 		};
 	}
 }
