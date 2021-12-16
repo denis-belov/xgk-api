@@ -8,10 +8,10 @@ namespace XGK
 	{
 		struct UniformOffsets
 		{
-			std::size_t object_addr = offsetof(Uniform, object_addr);
-			std::size_t name = offsetof(Uniform, name);
-			std::size_t block_index = offsetof(Uniform, block_index);
-			std::size_t size = offsetof(Uniform, size);
+			size_t object_addr = offsetof(Uniform, object_addr);
+			size_t name = offsetof(Uniform, name);
+			size_t block_index = offsetof(Uniform, block_index);
+			size_t size = offsetof(Uniform, size);
 		};
 
 		UniformOffsets uniform_offsets {};

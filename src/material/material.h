@@ -3,6 +3,9 @@
 
 
 
+// size_t
+#include <cstddef>
+// uint32_t
 #include <cstdint>
 #include <string>
 #include <vector>
@@ -19,7 +22,7 @@ namespace XGK
 	{
 		namespace MATERIAL
 		{
-			enum class Topology : std::size_t
+			enum class Topology : size_t
 			{
 				TRIANGLES,
 				POINTS,

@@ -1,3 +1,6 @@
+// size_t
+#include <cstddef>
+
 #include "xgk-api/src/descriptor-set/descriptor-set.h"
 
 
@@ -8,7 +11,7 @@ namespace XGK
 	{
 		struct DescriptorSetOffsets
 		{
-			std::size_t bindings = offsetof(DescriptorSet, bindings);
+			size_t bindings = offsetof(DescriptorSet, bindings);
 		};
 
 		DescriptorSetOffsets descriptor_set_offsets {};

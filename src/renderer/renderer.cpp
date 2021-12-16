@@ -1,5 +1,3 @@
-#include <cstddef>
-
 #include "xgk-api/src/renderer/renderer.h"
 
 

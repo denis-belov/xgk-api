@@ -1,3 +1,6 @@
+// size_t
+#include <cstddef>
+// memcpy
 #include <cstring>
 
 #include "xgk-api/src/scene/scene.h"
@@ -13,7 +16,7 @@ namespace XGK
 			object.scene_vertex_data_offset = vertex_data.size() / 3;
 			object.scene_vertex_data_length = object.vertex_data.size() / 3;
 
-			std::size_t asd = vertex_data.size();
+			size_t asd = vertex_data.size();
 
 			vertex_data.resize(vertex_data.size() + object.vertex_data.size());
 
@@ -25,7 +28,7 @@ namespace XGK
 			object->scene_vertex_data_offset = vertex_data.size() / 3;
 			object->scene_vertex_data_length = object->vertex_data.size() / 3;
 
-			std::size_t asd = vertex_data.size();
+			size_t asd = vertex_data.size();
 
 			vertex_data.resize(vertex_data.size() + object->vertex_data.size());
 

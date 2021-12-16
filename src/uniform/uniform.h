@@ -3,7 +3,8 @@
 
 
 
-#include <cstdint>
+// size_t
+#include <cstddef>
 #include <string>
 
 
@@ -18,9 +19,9 @@ namespace XGK
 
 			std::string name {};
 
-			std::size_t block_index {};
+			size_t block_index {};
 
-			std::size_t size {};
+			size_t size {};
 		};
 	}
 }

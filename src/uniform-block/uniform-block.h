@@ -3,7 +3,8 @@
 
 
 
-#include <cstdint>
+// size_t
+#include <cstddef>
 #include <string>
 #include <vector>
 
@@ -15,7 +16,7 @@ namespace XGK
 {
 	namespace API
 	{
-		enum class DescriptorBindingType : std::size_t
+		enum class DescriptorBindingType : size_t
 		{
 			UNIFORM_BUFFER,
 		};
@@ -36,7 +37,7 @@ namespace XGK
 
 
 
-			std::size_t binding {};
+			size_t binding {};
 
 			DescriptorBindingType type {};
 

@@ -12,7 +12,7 @@ namespace XGK
 
 		void UniformBlock::destroy (void)
 		{
-			for (std::size_t i {}; i < UniformBlock::instances.size(); ++i)
+			for (size_t i {}; i < UniformBlock::instances.size(); ++i)
 			{
 				delete UniformBlock::instances[i];
 			}
@@ -37,10 +37,10 @@ namespace XGK
 
 		struct UniformBlockOffsets
 		{
-			std::size_t binding = offsetof(UniformBlock, binding);
-			std::size_t type = offsetof(UniformBlock, type);
-			std::size_t name = offsetof(UniformBlock, name);
-			std::size_t uniforms = offsetof(UniformBlock, uniforms);
+			size_t binding = offsetof(UniformBlock, binding);
+			size_t type = offsetof(UniformBlock, type);
+			size_t name = offsetof(UniformBlock, name);
+			size_t uniforms = offsetof(UniformBlock, uniforms);
 		};
 
 		UniformBlockOffsets uniform_block_offsets {};
