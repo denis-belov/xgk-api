@@ -9,13 +9,15 @@
 // #include <cstdint>
 #include <vector>
 
+#include "xgk-api/src/base/base.h"
+
 
 
 namespace XGK
 {
 	namespace API
 	{
-		struct Object
+		struct Object : public Base
 		{
 			size_t scene_vertex_data_offset {};
 			size_t scene_vertex_data_length {};

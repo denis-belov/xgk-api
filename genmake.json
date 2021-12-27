@@ -32,13 +32,26 @@
 		"watch_files":
 		[
 			{
+				"file": "$(SRC)/base/base.cpp",
+				"watch_files": "$(SRC)/base/base.h"
+			},
+
+			{
 				"file": "$(SRC)/renderer/renderer.cpp",
-				"watch_files": "$(SRC)/renderer/renderer.h"
+				"watch_files":
+				[
+					"$(SRC)/base/base.h",
+					"$(SRC)/renderer/renderer.h"
+				]
 			},
 
 			{
 				"file": "$(SRC)/uniform/uniform.cpp",
-				"watch_files": "$(SRC)/uniform/uniform.h"
+				"watch_files":
+				[
+					"$(SRC)/base/base.h",
+					"$(SRC)/uniform/uniform.h"
+				]
 			},
 
 			{
@@ -46,6 +59,7 @@
 
 				"watch_files":
 				[
+					"$(SRC)/base/base.h",
 					"$(SRC)/uniform/uniform.h",
 					"$(SRC)/uniform-block/uniform-block.h"
 				]
@@ -56,6 +70,7 @@
 
 				"watch_files":
 				[
+					"$(SRC)/base/base.h",
 					"$(SRC)/uniform-block/uniform-block.h",
 					"$(SRC)/descriptor-set/descriptor-set.h"
 				]
@@ -66,6 +81,7 @@
 
 				"watch_files":
 				[
+					"$(SRC)/base/base.h",
 					"$(SRC)/uniform/uniform.h",
 					"$(SRC)/uniform-block/uniform-block.h",
 					"$(SRC)/descriptor-set/descriptor-set.h",
@@ -75,7 +91,11 @@
 
 			{
 				"file": "$(SRC)/object/object.cpp",
-				"watch_files": "$(SRC)/object/object.h"
+				"watch_files":
+				[
+					"$(SRC)/base/base.h",
+					"$(SRC)/object/object.h"
+				]
 			},
 
 			{
@@ -83,6 +103,7 @@
 
 				"watch_files":
 				[
+					"$(SRC)/base/base.h",
 					"$(SRC)/object/object.h",
 					"$(SRC)/scene/scene.h"
 				]

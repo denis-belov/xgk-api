@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 
+#include "xgk-api/src/base/base.h"
 #include "xgk-api/src/uniform/uniform.h"
 #include "xgk-api/src/uniform-block/uniform-block.h"
 #include "xgk-api/src/descriptor-set/descriptor-set.h"
@@ -32,7 +33,7 @@ namespace XGK
 
 
 
-		struct Material
+		struct Material : public Base
 		{
 			static std::vector<Material*> instances;
 

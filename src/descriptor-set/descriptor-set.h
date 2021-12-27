@@ -9,6 +9,7 @@
 
 #include <vector>
 
+#include "xgk-api/src/base/base.h"
 #include "xgk-api/src/uniform-block/uniform-block.h"
 
 
@@ -17,7 +18,7 @@ namespace XGK
 {
 	namespace API
 	{
-		struct DescriptorSet
+		struct DescriptorSet : public Base
 		{
 			std::vector<UniformBlock*> bindings {};
 		};

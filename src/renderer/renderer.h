@@ -6,13 +6,15 @@
 // size_t
 #include <cstddef>
 
+#include "xgk-api/src/base/base.h"
+
 
 
 namespace XGK
 {
 	namespace API
 	{
-		struct Renderer
+		struct Renderer : public Base
 		{
 			size_t width {};
 			size_t height {};

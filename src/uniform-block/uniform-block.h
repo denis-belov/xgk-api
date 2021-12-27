@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 
+#include "xgk-api/src/base/base.h"
 #include "xgk-api/src/uniform/uniform.h"
 
 
@@ -24,7 +25,7 @@ namespace XGK
 
 
 		// struct DescriptorBinding
-		struct UniformBlock
+		struct UniformBlock : public Base
 		{
 			static std::vector<UniformBlock*> instances;
 

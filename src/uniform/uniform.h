@@ -7,13 +7,15 @@
 #include <cstddef>
 #include <string>
 
+#include "xgk-api/src/base/base.h"
+
 
 
 namespace XGK
 {
 	namespace API
 	{
-		struct Uniform
+		struct Uniform : public Base
 		{
 			void* object_addr {};
 
