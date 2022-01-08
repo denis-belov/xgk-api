@@ -13,10 +13,10 @@ namespace XGK
 			size_t glsl100es_code_fragment = offsetof(Material, glsl100es_code_fragment);
 			size_t glsl300es_code_vertex = offsetof(Material, glsl300es_code_vertex);
 			size_t glsl300es_code_fragment = offsetof(Material, glsl300es_code_fragment);
-			size_t glsl4_code_vertex = offsetof(Material, glsl4_code_vertex);
-			size_t glsl4_code_fragment = offsetof(Material, glsl4_code_fragment);
 			size_t spirv_code_vertex = offsetof(Material, spirv_code_vertex);
 			size_t spirv_code_fragment = offsetof(Material, spirv_code_fragment);
+			size_t glsl_vulkan_code_vertex = offsetof(Material, glsl_vulkan_code_vertex);
+			size_t glsl_vulkan_code_fragment = offsetof(Material, glsl_vulkan_code_fragment);
 			size_t wgsl_code_vertex = offsetof(Material, wgsl_code_vertex);
 			size_t wgsl_code_fragment = offsetof(Material, wgsl_code_fragment);
 			size_t uniforms = offsetof(Material, uniforms);
